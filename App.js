@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import CameraScreen from './CameraScreen';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <SafeAreaProvider>
+        <SafeAreaView>
+          <CameraScreen/>
+        </SafeAreaView>
+      </SafeAreaProvider>
       <StatusBar style="auto" />
     </View>
   );
